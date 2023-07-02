@@ -1,0 +1,32 @@
+/* https://www.codewars.com/kata/55d277882e139d0b6000005d
+Grasshopper - Array Mean
+
+Instructions:
+Find the mean (average) of a list of numbers in an array.
+Information
+
+To find the mean (average) of a set of numbers add all of the numbers together and divide by the number of values in the list.
+
+For an example list of 1, 3, 5, 7
+
+1. Add all of the numbers
+
+1+3+5+7 = 16
+
+2. Divide by the number of values in the list. In this example there are 4 numbers in the list.
+
+16/4 = 4
+
+3. The mean (or average) of this list is 4
+*/
+
+// My solution
+const findAverage = function (nums) {
+  return nums.reduce((acc, num) => acc + num, 0) / nums.length;
+};
+
+// Trials
+console.log(findAverage([1])); //1
+console.log(findAverage([1, 3, 5, 7])); //4
+console.log(findAverage([])); //NaN
+console.log(findAverage([0, 100, 4, -5, 2, 45, 23, 4, 5, 10, 111, 66])); //30.41
